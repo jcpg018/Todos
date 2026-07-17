@@ -2,6 +2,7 @@
 import { TodoCounter } from './TodoCounter';
 import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
+import { TodoItem } from './TodoItem';
 import './App.css';
 
 function App() {
@@ -25,19 +26,6 @@ function App() {
 }
 
 
-function TodoItem() {
-
-return (
-  <li>
-     <span>V</span>
-     <p>Llorar con la llorona</p>
-     <span>X</span>
-
-  </li>
-
-);
-
-};
 
 
 export default App;
