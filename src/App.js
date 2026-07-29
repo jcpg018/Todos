@@ -20,11 +20,18 @@ const defaulTodos = [
 ]
 
 function App() {
+
+ const [searchValue, setsearchValue]  = React.useState('');
+
+  console.log('Los usuarios buscan todos de ' + searchValue);
+
+
+
   return (
            
     <React.Fragment>
       <TodoCounter completed={10} total={25} />
-      <TodoSearch />
+      <TodoSearch  searchValue= {searchValue} setsearchValue= {setsearchValue} />
       <TodoList>
 
         {defaulTodos.map(todo => (

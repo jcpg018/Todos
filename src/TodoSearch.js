@@ -3,11 +3,9 @@ import React from 'react';
 import './TodoSearch.css'
 
 
-function TodoSearch () {
+function TodoSearch ({ searchValue, setsearchValue}) {
 
-  const [searchValue, setsearchValue]  = React.useState('');
-
-  console.log('Los usuarios buscan todos de ' + setsearchValue);
+ 
 
  return (
 
