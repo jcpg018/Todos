@@ -21,7 +21,12 @@ const defaulTodos = [
 
 function App() {
 
+  const [todos, setTodos] = React.useState(defaulTodos);
+
  const [searchValue, setsearchValue]  = React.useState('');
+
+  const completedTodos = todos.filter(todo => !!todos.completed).length;
+  const totalTodos = 0;
 
   console.log('Los usuarios buscan todos de ' + searchValue);
 
@@ -30,7 +35,7 @@ function App() {
   return (
            
     <React.Fragment>
-      <TodoCounter completed={10} total={25} />
+      <TodoCounter completed={completedTodos} total={25} />
       <TodoSearch  searchValue= {searchValue} setsearchValue= {setsearchValue} />
       <TodoList>
 
