@@ -15,6 +15,7 @@ const defaulTodos = [
  {text: 'Tomar el curso de Intro a React.js', completed: false},
  {text: 'Bailar salsa casino', completed: false},
  {text: 'OOOOOhhhh', completed: false},
+ {text: 'usar estados derivados', completed: true},
 
 
 ]
