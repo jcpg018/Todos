@@ -25,7 +25,7 @@ function App() {
 
  const [searchValue, setsearchValue]  = React.useState('');
 
-  const completedTodos = todos.filter(todo => !!todos.completed).length;
+  const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = 0;
 
   console.log('Los usuarios buscan todos de ' + searchValue);
