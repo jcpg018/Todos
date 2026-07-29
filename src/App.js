@@ -26,7 +26,7 @@ function App() {
  const [searchValue, setsearchValue]  = React.useState('');
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
-  const totalTodos = 0;
+  const totalTodos = todos.length;
 
   console.log('Los usuarios buscan todos de ' + searchValue);
 
@@ -35,7 +35,7 @@ function App() {
   return (
            
     <React.Fragment>
-      <TodoCounter completed={completedTodos} total={25} />
+      <TodoCounter completed={completedTodos} total={totalTodos} />
       <TodoSearch  searchValue= {searchValue} setsearchValue= {setsearchValue} />
       <TodoList>
 
