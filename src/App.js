@@ -38,20 +38,48 @@ function App() {
 
   })
 
-  console.log('Los usuarios buscan todos de ' + searchValue);
+  //console.log('Los usuarios buscan todos de ' + searchValue);
+
+  const completeTodo = (text)  =>  {  
+       const newTodos = [...todos];
+       const todoIndex = newTodos.findIndex(
+          
+        (todo) =>  todo.text == text   
+
+       )
+
+       newTodos[todoIndex].completed = true; 
+         setTodos(newTodos)
+  }
+
+  const deleteTodo = (text)  =>  {  
+       const newTodos = [...todos];
+       const todoIndex = newTodos.findIndex(
+          
+        (todo) =>  todo.text == text   
+
+       )
+
+       newTodos.splice(todoIndex, 1);
+         setTodos(newTodos)
+  }
+
+
+
 
 
 
   return (
            
-    <React.Fragment>
+    <>
       <TodoCounter completed={completedTodos} total={totalTodos} />
       <TodoSearch  searchValue= {searchValue} setsearchValue= {setsearchValue} />
       <TodoList>
 
         {searchedTodos.map(todo => (
 
-            <TodoItem  key={todo.text} text={todo.text} completed={todo.completed}  />
+            <TodoItem  key={todo.text} text={todo.text} completed={todo.completed} onComplete={ () => completeTodo(todo.text)}  onDelete={() => deleteTodo(todo.text)} />
+
 
         ))}
 
@@ -59,7 +87,7 @@ function App() {
 
       <CreateTodoButton />
 
-      </React.Fragment>
+      </>
      
     
   );
