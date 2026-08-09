@@ -64,11 +64,6 @@ function App() {
          setTodos(newTodos)
   }
 
-
-
-
-
-
   return (
            
     <>
