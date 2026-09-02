@@ -74,7 +74,7 @@ import { CreateTodoButton } from './CreateTodoButton';
  
 
 
-  }, []);
+  }, [itemName, initialValue]);
 
    /////////////////// 
 
