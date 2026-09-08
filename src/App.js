@@ -6,6 +6,10 @@ import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TodoItem } from './TodoItem';
 import { CreateTodoButton } from './CreateTodoButton';
+import {TodosLoading}  from './TodosLoading';
+import {TodosError} from  './Todoserror';
+import {EmptyTodos} from './EmptyTodos';
+
 
 
 
@@ -176,9 +180,9 @@ function App() {
       <TodoCounter completed={completedTodos} total={totalTodos} />
       <TodoSearch  searchValue= {searchValue} setsearchValue= {setsearchValue} />
       <TodoList>
-         {error && <p>Desespérate, hubo un error...</p>}
-        {loading && <p>Estamos cargando...</p>}
-        {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
+         {error && <TodosError/>}
+        {loading &&   <><TodosLoading/> <TodosLoading/> <TodosLoading/></>                }
+        {(!loading && !searchedTodos.length) && <EmptyTodos/>}
         
         
         {searchedTodos.map(todo => (
