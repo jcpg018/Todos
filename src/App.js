@@ -181,7 +181,7 @@ function App() {
       <TodoSearch  searchValue= {searchValue} setsearchValue= {setsearchValue} />
       <TodoList>
          {error && <TodosError/>}
-        {loading &&   <><TodosLoading/> <TodosLoading/> <TodosLoading/></>                }
+        {loading &&   <><TodosLoading/> <TodosLoading/> <TodosLoading/></>}
         {(!loading && !searchedTodos.length) && <EmptyTodos/>}
         
         
