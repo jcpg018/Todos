@@ -10,6 +10,7 @@ import { CreateTodoButton } from './CreateTodoButton';
 import {TodosLoading}  from './TodosLoading';
 import {TodosError} from  './Todoserror';
 import {EmptyTodos} from './EmptyTodos';
+import { Modal } from './Modal';
 
 
 
@@ -33,6 +34,8 @@ function AppUI ()  {
     searchedTodos,
     toggleCompleteTodo,
     deleteTodo,
+    openModal,
+    setOpemModal,
   } = React.useContext(TodoContext);
 
 
@@ -67,6 +70,24 @@ return (
       </TodoList>
 
       <CreateTodoButton />
+
+        {openModal  && (
+
+
+
+             <Modal>
+
+               TOMA EL CURSO DE REACT AHORA MISMO
+              
+
+             </Modal>
+
+        )}
+
+
+
+
+      
     </>
   );
 

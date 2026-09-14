@@ -21,7 +21,7 @@ function TodoSearch () {
 
 export { TodoSearch };
 
-// console.log('Escrobiste en el Todoseach');
-// console.log(event); console.log(event.target)
- // console.log(event.target.value);
-
+/*  console.log('Escrobiste en el Todoseach');
+console.log(event); console.log(event.target)
+  console.log(event.target.value);
+ */
