@@ -11,6 +11,8 @@ import {TodosLoading}  from './TodosLoading';
 import {TodosError} from  './Todoserror';
 import {EmptyTodos} from './EmptyTodos';
 import { Modal } from './Modal';
+import { TodoForm } from './Todofrom';
+
 
 
 
@@ -35,7 +37,6 @@ function AppUI ()  {
     toggleCompleteTodo,
     deleteTodo,
     openModal,
-    setOpemModal,
   } = React.useContext(TodoContext);
 
 
@@ -77,7 +78,7 @@ return (
 
              <Modal>
 
-               TOMA EL CURSO DE REACT AHORA MISMO
+               <TodoForm/>
               
 
              </Modal>
